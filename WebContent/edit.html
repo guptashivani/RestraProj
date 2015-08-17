@@ -1,0 +1,38 @@
+<form name="iterable_optin" data-ng-submit="mctrl.editReservation()">
+                 
+                            
+                             <div class="search_container">
+                                <table>
+                                    <tr>
+                                        <td class="address_container">
+                                            <div class="address_field">
+                                            <label>Code:</label>
+                                               
+		<input type="text" placeholder="time" data-ng-model="mctrl.changeRecord.c" />
+                                            <label>Size:</label>
+                                                <input type="text" name="members" id="members" placeholder="Enter number of members" data-ng-model="mctrl.changeRecord.size"/>
+                                                <label>Date:</label>
+                                                <input type="text" name="date" id="date" placeholder="Enter date:DD/MM/YY" data-ng-model="mctrl.changeRecord.date" />
+                                              
+                                               <label>Time:</label>
+                                               
+		<input type="text" placeholder="time" data-ng-model="mctrl.changeRecord.time" />
+                                                <label>EMAIL:</label>
+		<input type="text" placeholder="email" data-ng-model="mctrl.changeRecord.email" />
+		<label>PHONE:</label>
+		<input type="text" placeholder="phone" data-ng-model="mctrl.changeRecord.phone" />
+                                            </div>
+                                            
+                                        </td>
+                                        
+                                        <td class="submit_button_container">
+                                        <input class="button" name="go" type="submit" value="Confirm" ng-click="adminEdit=false" >
+                                          
+                                        </td>
+                                        
+                                    </tr>
+                                </table>
+                                
+                            </div>
+                            <p data-ng-show="mctrl.done">Your confirmation code is:{{mctrl.changeRecord.c}}</p>
+                        </form>

@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr ng-init="mctrl.sorter='code'; mctrl.reverse = false;">
+      <th >code</th>
+      <th >Size</th>
+      <th>Table ID</th>
+      
+      <th >Status</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in mctrl.people">
+      <a data-ng-href="#/view/{{p.code}}" data-ng-click="mctrl.getReservation(p.code)" >{{p.code}}</a>
+      <td>{{p.size}}</td>
+      
+      <td>{{p.table_id}}</td>
+      <td>{{p.status}}</td>
+      
+      
+    </tr>
+  </tbody>
+</table>

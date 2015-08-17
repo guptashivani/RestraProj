@@ -1,0 +1,48 @@
+<div class="container">
+<h3>Reservation details</h3>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th >code</th>
+      <th >Size</th>
+      <th>Table ID</th>
+      <th >Name</th>
+      <th >Email</th>
+      <th >Phone</th>
+      <th >Date	</th>
+      <th >Time</th>
+      <th >Status</th>
+      <th> Cancel</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <td>{{mctrl.det.code}}</td>
+      <td>{{mctrl.det.size}}</td>
+      
+      <td>{{mctrl.det.table_id}}</td>
+      <td>{{mctrl.det.name}}</td>
+      <td>{{mctrl.det.email}}</td>
+      <td>{{mctrl.det.phone}}</td>
+      <td>{{mctrl.det.date}}</td>
+      <td>{{mctrl.det.time}}</td>
+      <td>{{mctrl.det.status}}</td>
+      <td style="text-align:left;" >
+      <a href="#" ng-click="mctrl.adminCancel(mctrl.det.code,$index)"><span class="glyphicon glyphicon-trash"></span></a>
+      </td>
+      
+      <th style="text-align:left;" data-ng-if="p.status === 'confirmed'">
+     <button data-ng-click="mctrl.showAdminSeating()">Assign</button>
+     
+     </th>
+     <tr data-ng-show="mctrl.showImageTables">
+     <td data-ng-repeat="i in mctrl.tables" class="round-button-circle" value="{{i.table_id}}" data-ng-init="mctrl.confirm.id=i.table_id" data-ng-model="mctrl.confirm.id" data-ng-click="mctrl.adminConfirmation(mctrl.det.code,i.table_id)" >Table:{{i.table_id}}
+     </td>
+     </tr>
+      
+    </tr>
+  </tbody>
+</table> 
+
+</div>

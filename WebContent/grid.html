@@ -1,0 +1,55 @@
+<div class="container">
+
+<table class="table table-striped">
+  <thead >
+    <tr>
+    <th></th>
+      <th >code</th>
+      
+      <th >Date</th>
+      <th >Time</th>
+      <th> Status</th>
+      
+    </tr>
+  </thead>
+  <tbody >
+    <tr data-ng-repeat="p in mctrl.people">
+    <!-- td>
+    <button data-ng-if="p.expanded" data-ng-click="p.expanded = false">-</button>
+              
+    </td-->
+      <td><a data-ng-href="#/view/{{ p.code }}" data-ng-click="mctrl.getReservation(p.code)" data-ng-model="mctrl.confirm.c">{{p.code}}</a>
+      
+      </td>
+      
+      <td>{{p.date}}</td>
+      <td>{{p.time}}</td>
+      <!-- tr data-ng-if="p.expanded" data-ng-repeat-end="">
+    
+    data-ng-if="!p.expanded" data-ng-click="p.expanded = true" data-ng-model="mctrl.confirm.code"
+      <th> {{p.code}}</th>
+      <th >{{p.size}}</th>
+      <th>{{p.table_id}}</th>
+      <th >{{p.name}}</th>
+      <th >{{p.email}}</th>
+      <th >{{p.phone}}</th-->
+            <th >{{p.status}}</th>
+      <!-- th style="text-align:left;" width="20%">
+      <a href="#" ng-click="mctrl.adminCancel(p.code,$index)"></a>
+      </th>
+     <th style="text-align:left;" data-ng-if="p.status === 'confirmed'">
+     <button data-ng-click="mctrl.showAdminSeating()">Assign</button>
+     
+     </th-->
+      </tr>
+     <!-- tr data-ng-show="mctrl.showImageTables">
+     <td data-ng-repeat="i in mctrl.tables" class="round-button-circle" value="{{i.table_id}}"  >Table:{{i.table_id}}
+     </td>
+     </tr-->
+         </tr>
+    
+  </tbody>
+  </table>
+  
+
+</div>
