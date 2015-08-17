@@ -13,6 +13,9 @@ size int,
 PRIMARY KEY(code)
 );
 
+ALTER TABLE 'emp_db'.'reservation'
+ADD UNIQUE(dat, table_id,status);
+
 CREATE TABLE 'emp_db'.'tables' (
 table_id int,
 size int,
