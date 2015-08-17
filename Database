@@ -1,1 +1,24 @@
+There are two database tables under the emp_db schema namely: reservation and tables:
+
+CREATE TABLE 'emp_db'.'reservation' (
+code INT AUTO-INCREMENT,
+name varchar(45),
+email varchar(45),
+phone varchar(10),
+date varchar(20),
+time varchar(10),
+status varchar(20),
+table_id int,
+size int,
+PRIMARY KEY(code)
+);
+
+CREATE TABLE 'emp_db'.'tables' (
+table_id int,
+size int,
+PRIMARY KEY(table_id)
+);
+
+The 'tables' table is just for reference to check for admin of the initial setup of the restaurant size and tables. It has some initial values ot start with.
+
 
