@@ -193,51 +193,7 @@
                         </form>
 </div>
 
-<button data-ng-click="mctrl.getAll()">GET ALL RECORDS</button>
-<hr>
-<input type="text" placeholder="confirmation code" data-ng-model="mctrl.code" required/>
-<button data-ng-click="mctrl.getRservation()">GET RECORD</button>
-<hr>
 
-<form data-ng-submit="mctrl.addRecord()">
-
-	<div>
-		<label>NAME:</label>
-		<input type="text" placeholder="name" data-ng-model="mctrl.newRecord.name" />
-	</div>
-	<div>	
-		<label>PHONE:</label>
-		<input type="text" placeholder="phone" data-ng-model="mctrl.newRecord.phone" />
-	</div>
-	<div>	
-		<label>EMAIL:</label>
-		<input type="text" placeholder="email" data-ng-model="mctrl.newRecord.email" />
-		</div>
-		<div>
-		<button type="submit">ADD RESESRVATION</button>
-	</div>
-
-</form>
-
-<hr>
-
-<form data-ng-submit="mctrl.tryLogin()" data-ng-show="!mctrl.loggedIn">
-
-
-	<div>	
-		<label>EMAIL:</label>
-		<input type="text" placeholder="email" data-ng-model="mctrl.auth.email" />
-		</div>
-			<div>
-		<label>PASSWORD:</label>
-		<input type="password" placeholder="password" data-ng-model="mctrl.auth.password" />
-	</div>
-	
-		<div>
-		<button type="submit">Login</button>
-	</div>
-
-</form>
 <p data-ng-show="mctrl.loggedIn">You are logged In</p>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 <script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
